@@ -12,5 +12,7 @@
     <color name="myRed">#FF3466</color>
     <color name="pink">#FF3365</color>
     <color name="gray">#6D6D80</color>
+    <color name="black_gray">#222232</color>
+    <color name="gray2">#565665</color>
 
 </resources>
