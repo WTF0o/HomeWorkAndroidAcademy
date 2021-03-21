@@ -18,4 +18,7 @@
     <dimen name="margin13dp">13dp</dimen>
     <dimen name="margin10dp">10dp</dimen>
     <dimen name="margin30dp">30dp</dimen>
+    <dimen name="margin22dp">22dp</dimen>
+    <dimen name="margin56dp">56dp</dimen>
+    <dimen name="margin44dp">44dp</dimen>
 </resources>

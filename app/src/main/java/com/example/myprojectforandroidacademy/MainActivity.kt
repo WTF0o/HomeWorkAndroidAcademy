@@ -1,10 +1,9 @@
 package com.example.myprojectforandroidacademy
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity(), FragmentMoviesListActivity.MoviesListClickListener {
+class MainActivity : AppCompatActivity(), FragmentMoviesList.MoviesListClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,7 +12,7 @@ class MainActivity : AppCompatActivity(), FragmentMoviesListActivity.MoviesListC
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .addToBackStack(null)
-                .add(R.id.container, FragmentMoviesListActivity())
+                .add(R.id.container, FragmentMoviesList())
                 .commit()
         }
     }
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity(), FragmentMoviesListActivity.MoviesListC
     override fun openMovieDetails() {
         supportFragmentManager.beginTransaction()
             .addToBackStack(null)
-            .replace(R.id.container, FragmentMoviesDetailsActivity())
+            .replace(R.id.container, FragmentMoviesDetails())
             .commit()
     }
 

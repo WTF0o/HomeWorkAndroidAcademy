@@ -12,5 +12,7 @@
     <string name="cast_mark_ruffalo">Mark Ruffalo</string>
     <string name="cast_chris_hemsworth">Chris Hemsworth</string>
     <string name="movies_list">Movies list</string>
-    <string name="duration_film">137 MIN</string>
+    <string name="duration_film">137 min</string>
+    <string name="back">Back</string>
+    <string name="movie_poster">Постер фильма</string>
 </resources>

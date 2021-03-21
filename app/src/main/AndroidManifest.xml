@@ -9,9 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyProjectForAndroidAcademy">
-        <activity android:name=".FragmentMoviesListActivity"></activity>
-        <activity android:name=".FragmentMoviesDetailsActivity" />
-        <activity android:name=".MovieDetailsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
