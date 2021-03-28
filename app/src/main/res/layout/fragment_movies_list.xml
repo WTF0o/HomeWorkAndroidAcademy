@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myBlack"
+    tools:context=".FragmentMoviesList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tvMoviesList"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_44dp"
+            android:drawableStart="@drawable/ic_combined_shape"
+            android:drawablePadding="@dimen/margin_8dp"
+            android:text="@string/movies_list"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/centerGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/containerMovieItem"
+            layout="@layout/item_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_18dp"
+            app:layout_constraintEnd_toEndOf="@id/centerGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@+id/tvMoviesList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

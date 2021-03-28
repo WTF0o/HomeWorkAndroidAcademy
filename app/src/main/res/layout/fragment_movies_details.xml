@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/myBlack">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/movieContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_16dp" />
+
+        <ImageView
+            android:id="@+id/ivMovieImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/movie_poster"
+            android:foreground="@drawable/movie_item_gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie_background_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_56dp"
+            android:drawableStart="@drawable/ic_less"
+            android:drawablePadding="@dimen/margin_8dp"
+            android:gravity="start"
+            android:text="@string/movie_back"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_12sp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toTopOf="@id/ivMovieImage" />
+
+        <TextView
+            android:id="@+id/tvRars"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:gravity="start"
+            android:text="@string/movie_rars"
+            android:textColor="@color/myWhite"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivMovieImage"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine" />
+
+        <TextView
+            android:id="@+id/tvTitleMovie"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start|bottom"
+            android:text="@string/movie_title"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/text_size_40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/ivMovieImage" />
+
+        <TextView
+            android:id="@+id/tvCategoriesMovie"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:gravity="start"
+            android:text="@string/movie_categories"
+            android:textColor="@color/myRed"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleMovie" />
+
+        <RatingBar
+            android:id="@+id/rbRatingMovie"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/gray"
+            android:progressTint="@color/pink"
+            android:rating="4"
+            tools:rating = "5"
+            android:secondaryProgressTint="@color/pink"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoriesMovie" />
+
+        <TextView
+            android:id="@+id/tvCountViews"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:gravity="start"
+            android:text="@string/movie_count_reviews"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/rbRatingMovie"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toEndOf="@+id/rbRatingMovie"
+            app:layout_constraintTop_toTopOf="@id/rbRatingMovie" />
+
+        <TextView
+            android:id="@+id/tvStoryline"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:gravity="start"
+            android:text="@string/movie_storyline"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/rbRatingMovie" />
+
+        <TextView
+            android:id="@+id/tvMovieDescription"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:alpha="0.75"
+            android:gravity="start"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/movie_description"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/tvStoryline" />
+
+        <TextView
+            android:id="@+id/tvCast"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:gravity="start"
+            android:text="@string/movie_cast"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieDescription" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCastRobertDowney"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="@dimen/height_0dp"
+            android:layout_marginTop="@dimen/margin_7dp"
+            android:contentDescription="@string/movie_cast_robert_downey"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie_cast_robert_downey"
+            app:layout_constraintBottom_toTopOf="@+id/tvCastRobertDowney"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/ivCastChrisEvams"
+            app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCastChrisEvams"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="@dimen/height_0dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_7dp"
+            android:contentDescription="@string/movie_cast_chris_evans"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie_cast_chris_evans"
+            app:layout_constraintBottom_toTopOf="@id/tvCastChrisEvans"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/ivCastMarkRufallo"
+            app:layout_constraintStart_toEndOf="@+id/ivCastRobertDowney"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCastMarkRufallo"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="@dimen/height_0dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_7dp"
+            android:contentDescription="@string/movie_cast_mark_ruffalo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie_cast_mark_ruffalo"
+            app:layout_constraintBottom_toTopOf="@id/tvCastMarkRufallo"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/ivCastChrisHemsworth"
+            app:layout_constraintStart_toEndOf="@+id/ivCastChrisEvams"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCastChrisHemsworth"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="@dimen/height_0dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginTop="@dimen/margin_7dp"
+            android:contentDescription="@string/movie_cast_chris_hemsworth"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie_cast_chris_hemsworth"
+            app:layout_constraintBottom_toTopOf="@id/tvCastChrisHemsworth"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+            app:layout_constraintStart_toEndOf="@+id/ivCastMarkRufallo"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <TextView
+            android:id="@+id/tvCastRobertDowney"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6dp"
+            android:text="@string/movie_cast_robert_downey"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/ivCastRobertDowney"
+            app:layout_constraintStart_toStartOf="@id/ivCastRobertDowney"
+            app:layout_constraintTop_toBottomOf="@id/ivCastRobertDowney" />
+
+        <TextView
+            android:id="@+id/tvCastChrisEvans"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6dp"
+            android:text="@string/movie_cast_chris_evans"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/ivCastChrisEvams"
+            app:layout_constraintStart_toStartOf="@id/ivCastChrisEvams"
+            app:layout_constraintTop_toBottomOf="@id/ivCastChrisEvams" />
+
+        <TextView
+            android:id="@+id/tvCastMarkRufallo"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6dp"
+            android:text="@string/movie_cast_mark_ruffalo"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/ivCastMarkRufallo"
+            app:layout_constraintStart_toStartOf="@id/ivCastMarkRufallo"
+            app:layout_constraintTop_toBottomOf="@id/ivCastMarkRufallo" />
+
+        <TextView
+            android:id="@+id/tvCastChrisHemsworth"
+            android:layout_width="@dimen/wight_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_6dp"
+            android:text="@string/movie_cast_chris_hemsworth"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/text_size_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/ivCastChrisHemsworth"
+            app:layout_constraintStart_toStartOf="@id/ivCastChrisHemsworth"
+            app:layout_constraintTop_toBottomOf="@id/ivCastChrisHemsworth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

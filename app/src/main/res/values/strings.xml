@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">My project for Android academy</string>
+    <string name="movie_rars">13+</string>
+    <string name="movie_categories">Action, Adventure, Fantasy</string>
+    <string name="movie_title">Avengers: \nEnd Game</string>
+    <string name="movie_count_reviews">125 Reviews</string>
+    <string name="movie_storyline">Storyline</string>
+    <string name="movie_description">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.</string>
+    <string name="movie_cast">Cast</string>
+    <string name="movie_cast_robert_downey">Robert Downey Jr.</string>
+    <string name="movie_cast_chris_evans">Chris Evans</string>
+    <string name="movie_cast_mark_ruffalo">Mark Ruffalo</string>
+    <string name="movie_cast_chris_hemsworth">Chris Hemsworth</string>
+    <string name="movies_list">Movies list</string>
+    <string name="movie_duration_film">137 min</string>
+    <string name="movie_back">Back</string>
+    <string name="movie_poster">Movie poster</string>
+</resources>
