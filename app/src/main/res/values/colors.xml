@@ -14,5 +14,7 @@
     <color name="gray">#6D6D80</color>
     <color name="black_gray">#222232</color>
     <color name="gray2">#565665</color>
+    <color name="black_blue">#191926</color>
+    <color name="movie_border">#2D2D3D</color>
 
 </resources>

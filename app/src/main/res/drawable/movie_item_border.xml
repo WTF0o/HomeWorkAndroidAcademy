@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="@dimen/width_2dp"
+        android:color="@color/movie_border"/>
+    <corners
+        android:radius="@dimen/corner_10dp" />
+
+</shape>

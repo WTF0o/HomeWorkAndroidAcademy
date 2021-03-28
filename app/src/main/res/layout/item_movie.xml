@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/height_300dp"
+    android:foreground="@drawable/movie_item_border"
+    app:cardCornerRadius="@dimen/corner_10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/movieContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_gray">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuidLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_8dp"
+                app:layout_constraintStart_toStartOf="@id/ivMovieImage"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuidLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/ivMovieImage"
+                app:layout_constraintGuide_end="@dimen/margin_8dp"/>
+
+            <ImageView
+                android:id="@+id/ivMovieImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/movie"
+                android:foreground="@drawable/movie_item_gradient"
+                android:contentDescription="@string/movie_poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMovieAge"
+                android:layout_width="@dimen/weight_24dp"
+                android:layout_height="@dimen/height_24dp"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:alpha="0.9"
+                android:background="@drawable/text_view_corner"
+                android:gravity="center"
+                android:text="@string/movie_rars"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+                app:layout_constraintTop_toTopOf="@id/ivMovieImage" />
+
+            <ToggleButton
+                android:id="@+id/tbFavoriteMovie"
+                android:layout_width="@dimen/width_16dp"
+                android:layout_height="@dimen/height_14dp"
+                android:layout_marginTop="@dimen/margin_13dp"
+                android:background="@drawable/ic_like_white"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+                app:layout_constraintTop_toTopOf="@id/ivMovieImage" />
+
+            <TextView
+                android:id="@+id/tvCategoriesMovie"
+                android:layout_width="@dimen/wight_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:text="@string/movie_categories"
+                android:textColor="@color/myRed"
+                android:textSize="@dimen/text_size_8sp"
+                app:layout_constraintBottom_toTopOf="@id/rbRatingMovie"
+                app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+                app:layout_constraintEnd_toEndOf="@id/rightGuidLine"/>
+
+            <RatingBar
+                android:id="@+id/rbRatingMovie"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/gray"
+                android:progressTint="@color/pink"
+                android:rating="4"
+                android:secondaryProgressTint="@color/pink"
+                android:stepSize="0.5"
+                app:layout_constraintEnd_toStartOf="@id/tvCountViews"
+                app:layout_constraintBottom_toBottomOf="@id/ivMovieImage"
+                app:layout_constraintStart_toStartOf="@+id/leftGuidLine" />
+
+            <TextView
+                android:id="@+id/tvCountViews"
+                android:layout_width="@dimen/wight_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:text="@string/movie_count_reviews"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/text_size_8sp"
+                android:textStyle="bold"
+                android:gravity="start"
+                app:layout_constraintBottom_toBottomOf="@id/rbRatingMovie"
+                app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+                app:layout_constraintTop_toTopOf="@id/rbRatingMovie"
+                app:layout_constraintStart_toEndOf="@id/rbRatingMovie"/>
+
+            <TextView
+                android:id="@+id/tvMovieTitle"
+                android:layout_width="@dimen/wight_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:text="@string/movie_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+                app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+                app:layout_constraintTop_toBottomOf="@id/ivMovieImage"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvDurationMovie"
+                android:layout_width="@dimen/wight_0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_duration_film"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/text_size_8sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="@id/leftGuidLine"
+                app:layout_constraintEnd_toEndOf="@id/rightGuidLine"
+                android:gravity="start"
+                app:layout_constraintTop_toBottomOf="@id/tvMovieTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
