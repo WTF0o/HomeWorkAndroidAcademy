@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:src="@drawable/movie"
+                android:src="@drawable/movie_poster"
                 android:foreground="@drawable/movie_item_gradient"
                 android:contentDescription="@string/movie_poster"
                 app:layout_constraintEnd_toEndOf="parent"
